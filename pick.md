@@ -84,13 +84,13 @@ python test.py --checkpoint path/to/checkpoint --boxes_transcripts path/to/boxes
                --gpu 0 --batch_size 2
 ```
 
-Replace the path/to/checkpoint folder. The models are automatically saved in /PICK-pytorch/saved/models/PICK_Default folder.  An example of a testing script is given below.
+Replace the checkpoint, image_path folder, and output folder. The models are automatically saved in the /PICK-pytorch/saved/models/PICK_Default folder. An example of a testing script is given below.
 
 ```
  python3 test.py --checkpoint ~/PICK-pytorch/saved/models/PICK_Default/test_1221_004907/model_best.pth --boxes_transcripts ~/PICK-pytorch/boxx --images_path  ~/PICK-pytorch/images --output_folder ~/PICK-pytorch/passport_outputs --gpu 0 --batch_size 2
 ```
 
-The results are saved in the "passport_outputs" folder. Each image's keys and values are recorded in a corresponding "<Image_file_name>.txt" file.
+The results are saved in the "passport_outputs" folder. Each image's keys and values are recorded in a corresponding "<Image_file_name>.txt" file. 
 
 ### Inference
 
