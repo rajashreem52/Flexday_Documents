@@ -105,12 +105,12 @@ Step 2: Execute an OCR script on the images and create a <filename>.tsv file for
 Step 3: Run the Script
 
 ```
-
+python test.py --checkpoint path/to/checkpoint --boxes_transcripts path/to/boxes_transcripts \
+ --images_path path/to/images_path --output_folder path/to/output_folder \
+ --gpu 0 --batch_size 2
 ```
 
-python test.py --checkpoint path/to/checkpoint --boxes_transcripts path/to/boxes_transcripts \
-               --images_path path/to/images_path --output_folder path/to/output_folder \
-               --gpu 0 --batch_size 2
+
 
 ```
 
