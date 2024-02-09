@@ -62,9 +62,11 @@ The output of the above code is a folder named "output_folder" which has the fol
 
 So, the dataset has the following format.
 
+```
 dataset
 ├───boxes_trans
 └───images
+```
 
 ###### Step 2: Split the Dataset
 
