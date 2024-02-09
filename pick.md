@@ -36,7 +36,7 @@ git clone https://github.com/wenwenyu/PICK-pytorch.git
 Install the required packages using pip, and then proceed to install the latest stable version of PyTorch and torchvision that is compatible with your CUDA version. Use the following code to install the latest stable releases.
 
 ```
- pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 -f https://download.pytorch.org/whl/cu101/torch_stable.html
+ pip install torch==1.13.1+cu116 torchvision==0.14.1+cu116 -f https://download.pytorch.org/whl/cu116/torch_stable.html
 ```
 
 ### Training
@@ -47,7 +47,13 @@ Install the required packages using pip, and then proceed to install the latest 
 cd PICK-pytorch
 ```
 
-Save the dataset in the "PICK-pytorch" folder.  An example of the dataset format is given below.
+Check the details of the data format from the following link.
+
+```
+https://github.com/wenwenyu/PICK-pytorch/tree/master/data
+```
+
+Save the dataset in the "PICK-pytorch" folder.  An example of the dataset format is given below. 
 
 ```
 ├── boxes_and_transcripts
@@ -108,10 +114,4 @@ Step 3: Run the Script
 python test.py --checkpoint path/to/checkpoint --boxes_transcripts path/to/boxes_transcripts \
  --images_path path/to/images_path --output_folder path/to/output_folder \
  --gpu 0 --batch_size 2
-```
-
-
-
-```
-
 ```
