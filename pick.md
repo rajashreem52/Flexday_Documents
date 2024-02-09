@@ -23,8 +23,6 @@
 conda create --name pick python=3.8.10
 
 conda activate pick
-
-
 ```
 
 #### Step 2: Clone the PICK Repository
@@ -51,7 +49,7 @@ cd PICK-pytorch
 
 Save the dataset in the "PICK-pytorch" folder.  An example of the dataset format is given below.
 
-
+```
 ├── boxes_and_transcripts
 │   ├── Image_0.tsv
 │   └── Image_1.tsv
@@ -60,10 +58,9 @@ Save the dataset in the "PICK-pytorch" folder.  An example of the dataset format
     └── Image_1.jpg  
 ├── test.csv
 ├── train.csv
+```
 
 #### Step 2: Modify  Configuration
-
-
 
 - Modify `train_dataset` and `validation_dataset` args in `config.json` file, including `files_name`, `images_folder`, `boxes_and_transcripts_folder`, `entities_folder`, `iob_tagging_type` and `resized_image_size`.
 
@@ -108,9 +105,13 @@ Step 2: Execute an OCR script on the images and create a <filename>.tsv file for
 Step 3: Run the Script
 
 ```
+
 ```
+
 python test.py --checkpoint path/to/checkpoint --boxes_transcripts path/to/boxes_transcripts \
                --images_path path/to/images_path --output_folder path/to/output_folder \
                --gpu 0 --batch_size 2
+
 ```
+
 ```
