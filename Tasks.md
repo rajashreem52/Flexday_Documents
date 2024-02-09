@@ -5,4 +5,4 @@ Adjust the bounding box coordinates after transformation
 Train ABINet with passport dataset.
 Integrate MMOCR with PICK.
 ##### PICK
-Improve PICK performance.
+Improve PICK performance using data augmentation.
