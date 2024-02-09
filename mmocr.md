@@ -23,12 +23,12 @@ pip install -v -e .
 
 ##### Quick Run
 
-Create a python script to run the following code.
+Create a Python script to run the following code. Replace the /path/to/image with the image file name.
 
 ```
 from mmocr.apis import MMOCRInferencer
 # Load models into memory
 ocr = MMOCRInferencer(det='DBNetpp', rec='ABINet')
 # Perform inference
-ocr('new.jpg',out_dir='outputs_ocr/', save_pred=True, save_vis=True)
+ocr('/path/to/image',out_dir='outputs_ocr/', save_pred=True, save_vis=True)
 ```
