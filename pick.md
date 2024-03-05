@@ -28,7 +28,7 @@ conda activate pick
 #### Step 2: Clone the PICK Repository
 
 ```
-git clone https://github.com/wenwenyu/PICK-pytorch.git
+git clone https://github.com/rajashreem52/PICK_EASYOCR.git
 ```
 
 #### Step 3: Install Required Packages
@@ -100,18 +100,29 @@ The results are saved in the "passport_outputs" folder. Each image's keys and va
 
 ### Inference
 
-Step 1:  Save an image or multiple images in a designated folder.
-
-Step 2: Execute an OCR script on the images and create a <filename>.tsv file for each image. Save these .tsv files in a specified folder.  Follow MMOCR.md file to generate the 
-
-.tsv files.
-
-- every `file_name.tsv` file has multi-line with format: `index,box_coordinates (clockwise 8 values), transcripts`.
-
-Step 3: Run the Script
+##### Step 1:  Install the required packages
 
 ```
-python test.py --checkpoint path/to/checkpoint --boxes_transcripts path/to/boxes_transcripts \
- --images_path path/to/images_path --output_folder path/to/output_folder \
- --gpu 0 --batch_size 2
+pip install easyocr
+pip install opencv-python
 ```
+
+##### Step 2:  Run the Prediction Script
+
+```
+bash predict.sh
+```
+
+The resulting output will be as follows. When conducting inference with a single image, you may input the image filename. For multiple-image inference, input the image folder. However, avoid providing both simultaneously. You have the option to include a preferred checkpoint, or the script will use the default value. Similarly, you can specify an output folder name, or the script will default to the provided default folder called "output_folder".
+
+```
+Usage: predict.sh (--image_filename <image_filename> | --image_folder <image_folder>) [--output_folder <output_folder>] [--checkpoint <checkpoint_path>]
+```
+
+An example usage for a single image inference is given below:
+
+```
+ bash predict.sh --image_filename new.jpg
+```
+
+The generated output will be stored in the default output folder under the filename "new.txt". Therefore, the output file will adopt the name of the input image filename (excluding the extension) followed by ".txt".
